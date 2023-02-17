@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+</head>
+<title>Employees</title>
+
+<body>
+    <div class="container">
+        <h1><i><b> View all employee details....</b></i></h1><br>
+    </div><hr>
+
+    <table border="2" cell spacing="3" class="table table-dark table-striped-columns">
+        <tr>
+            <th>S.No.</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Bonus</th>
+            <th>Role</th>
+            <th>Contact No.</th>
+        </tr>
+        {% for emp in employee %}
+        <tr>
+            <td>{{ emp.id }}</td>
+            <td>{{ emp.first_name }}
+                {{ emp.last_name }}</td>
+            <th>{{ emp.department }}</th>
+            <th>{{ emp.salary }}</th>
+            <th>{{ emp.bonus }} </th>
+            <th>{{ emp.role }}</th>
+            <th>{{ emp.phone_no }}</th>
+        {% endfor %}
+        </tr>
+    </table>
+    <hr>
+
+
+
+    <br>
+    <a href="/add"><input type="button" value="Add Employee" style="background-color: darkcyan; "></a>
+
+
+
+
+
+
+
+</body>
+
+</html>
